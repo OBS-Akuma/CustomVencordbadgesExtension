@@ -1,0 +1,35 @@
+.global-badge-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.global-badge-tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.custom-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.global-badge {
+    transition: transform 0.1s ease;
+}
+
+.global-badge:hover {
+    transform: scale(1.1);
+}
